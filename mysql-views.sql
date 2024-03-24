@@ -18,14 +18,14 @@ SHOW FULL TABLES IN digibelldb WHERE TABLE_TYPE LIKE 'VIEW';
 -- Showing View Definitions
 SHOW CREATE VIEW employee_details;
 
-
 -- Renaming Views
-ALTER VIEW employee_details RENAME TO employee_details_with_address;
+CREATE VIEW employee_details_with_address AS
+SELECT * FROM employee_details;
+
 
 
 -- Dropping Views
-DROP VIEW updatable_employee_details;
-
+DROP VIEW employee_details;
 
 
 
